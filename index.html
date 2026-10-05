@@ -59,13 +59,14 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px
 .hero{position:relative;padding:80px 0 0;}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 80% 38%,rgba(216,178,140,.18),transparent 70%);pointer-events:none;}
 .hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;position:relative;}
-.hero h1{font-size:clamp(46px,6vw,82px);line-height:.98;margin-top:20px;}
+.hero h1{font-size:clamp(38px,4.4vw,62px);line-height:1.02;margin-top:20px;}
 .hero h1 em{font-style:normal;color:var(--gold);display:block;}
 .hero-sub{font-size:16.5px;color:var(--on-dark);opacity:.88;max-width:46ch;margin-top:26px;}
 .hero-cta{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap;}
 .viz{position:relative;}
 .viz svg{width:100%;height:auto;display:block;}
-.viz-note{position:absolute;right:10px;bottom:6px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim-dark);opacity:.7;}
+.trust{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:13px;color:var(--dim-dark);}
+.trust b{color:var(--gold);font-weight:700;}
 .hero-nav{margin-top:56px;border-top:1px solid var(--line-dark);display:grid;grid-template-columns:repeat(6,1fr);gap:14px;padding:22px 0 26px;position:relative;}
 .hn{display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--dim-dark);line-height:1.3;}
 .hn svg{flex:none;width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.4;}
@@ -74,6 +75,15 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px
   .hero-grid{grid-template-columns:1fr;gap:28px;}
   .hero-nav{grid-template-columns:repeat(2,1fr);}
 }
+
+/* PAIN */
+.pain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.pain{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:24px 22px;font-size:15px;line-height:1.45;}
+.pain::before{content:"\2014";display:block;font-family:'Cormorant Garamond';font-size:26px;line-height:1;color:var(--gold-ink);margin-bottom:10px;}
+.pain-key{font-family:'Cormorant Garamond';font-size:clamp(26px,3vw,36px);line-height:1.15;font-weight:600;margin:40px 0 0;max-width:46ch;}
+.pain-key em{font-style:normal;color:var(--gold-ink);}
+@media (max-width:980px){.pain-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.pain-grid{grid-template-columns:1fr;}}
 
 /* ABOUT / SYSTEM */
 .sys{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;}
@@ -96,6 +106,10 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px
 .svc .price{margin-top:12px;padding-top:14px;border-top:1px solid var(--line);font-size:13.5px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:10px;}
 .svc .price span{color:var(--gold-ink);font-family:'Cormorant Garamond';font-size:22px;font-weight:600;}
 .svc .price small{font-weight:500;color:var(--text-dim);font-size:12px;display:block;}
+.svc.lead{border-color:var(--gold-ink);box-shadow:0 0 0 1px var(--gold-ink) inset;}
+.badge{align-self:flex-start;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink);background:var(--gold);border-radius:4px;padding:4px 8px;}
+.svc ul{margin:0;padding:0 0 0 18px;font-size:13.5px;color:var(--text-dim);}
+.svc ul li{margin:2px 0;}
 @media (max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:580px){.svc-grid{grid-template-columns:1fr;}}
 
@@ -118,6 +132,9 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px
 .steps li:not(:last-child)::after{content:"→";position:absolute;top:10px;left:60px;color:var(--gold-ink);opacity:.7;}
 .steps h3{font-family:'Manrope';font-weight:700;font-size:16px;margin:16px 0 6px;}
 .steps p{margin:0;color:var(--text-dim);font-size:13.5px;}
+.steps .t{display:block;margin-top:8px;font-family:'JetBrains Mono';font-size:11.5px;color:var(--gold-ink);}
+.steps-note{margin-top:30px;font-size:14px;color:var(--text-dim);max-width:80ch;}
+.steps-note b{color:var(--text);}
 @media (max-width:980px){.steps{grid-template-columns:1fr;gap:0;}.steps li{display:grid;grid-template-columns:60px 1fr;gap:6px 16px;padding:18px 0;border-top:1px solid var(--line);}.steps li:last-child{border-bottom:1px solid var(--line);}.steps li:not(:last-child)::after{display:none;}.steps h3{margin:2px 0 4px;}.steps .n{grid-row:span 2;}}
 
 /* CASES */
@@ -136,6 +153,9 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px
 .note{font-size:12px;color:var(--text-dim);font-style:italic;margin-top:12px;}
 .logic{font-size:13px;color:var(--text-dim);margin:-14px 0 28px;}
 @media (max-width:820px){.case-grid{grid-template-columns:1fr;}}
+.mid-cta{margin-top:44px;background:var(--ink);color:var(--on-dark);border-radius:8px;padding:26px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+.mid-cta p{margin:0;max-width:56ch;color:var(--dim-dark);font-size:15px;}
+.mid-cta p b{color:var(--on-dark);font-family:'Cormorant Garamond';font-size:24px;font-weight:600;display:block;margin-bottom:4px;}
 .more{margin-top:48px;}
 .more h3{font-size:30px;}
 .pf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px;}
@@ -217,7 +237,7 @@ footer a:hover{color:var(--gold);}
       <a href="#team">Команда</a>
       <a href="#contact">Контакты</a>
     </div>
-    <a class="btn btn-gold btn-sm" href="#contact">Обсудить проект →</a>
+    <a class="btn btn-gold btn-sm" href="#contact">Бесплатный мини-аудит →</a>
   </div>
 </nav>
 
@@ -226,12 +246,13 @@ footer a:hover{color:var(--gold);}
     <div class="hero-grid">
       <div>
         <div class="eyebrow light">Агентство системного маркетинга</div>
-        <h1>Приводим клиентов. <em>Выстраиваем маркетинг.</em></h1>
-        <p class="hero-sub">Стратегия, Яндекс Директ, реклама ВКонтакте, чат-боты, сайты и аналитика: всё в одной системе, нацеленной на рост вашего бизнеса.</p>
+        <h1>Маркетинг уровня федеральной сети <em>для вашего бизнеса</em></h1>
+        <p class="hero-sub">8 лет в рекламе, 4 года — весь маркетинг федеральной сети пиццерий. Сначала разбираемся в продукте и оффере, потом запускаем Яндекс Директ и ВКонтакте. Проект ведёт лично основатель, без менеджеров-посредников.</p>
         <div class="hero-cta">
-          <a class="btn btn-gold" href="#contact">Обсудить проект →</a>
+          <a class="btn btn-gold" href="#contact">Получить мини-аудит бесплатно →</a>
           <a class="btn btn-line" href="#cases">Смотреть кейсы</a>
         </div>
+        <div class="trust"><span><b>8 лет</b> в рекламе</span><span><b>до 600 000 ₽</b> бюджета в месяц</span><span><b>20+</b> кейсов</span><span><b>30+</b> ниш</span></div>
       </div>
       <div class="viz" aria-hidden="true">
         <svg viewBox="0 0 620 420" xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -251,7 +272,6 @@ footer a:hover{color:var(--gold);}
           <rect x="60" y="334" width="150" height="8" rx="4" fill="rgba(243,237,228,.08)"/>
           <rect x="226" y="334" width="90" height="8" rx="4" fill="rgba(243,237,228,.08)"/>
         </svg>
-        <span class="viz-note">иллюстрация</span>
       </div>
     </div>
     <div class="hero-nav">
@@ -266,13 +286,26 @@ footer a:hover{color:var(--gold);}
 </header>
 </div>
 
-<section id="approach">
+<section id="pain">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Узнаёте свою ситуацию?</div><h2 class="sec-title">Реклама есть.<br>Понимания — нет.</h2></div></div>
+    <div class="pain-grid">
+      <div class="pain">Реклама крутится, заявки идут, но непонятно, сколько стоит клиент и окупается ли это.</div>
+      <div class="pain">Сменили уже не первого таргетолога, и каждый начинает с нуля.</div>
+      <div class="pain">Подняли бюджет, а продаж больше не стало.</div>
+      <div class="pain">Реклама, сайт и контент живут отдельно, и всё держится на вас.</div>
+    </div>
+    <p class="pain-key">Если проблема в предложении или сайте, <em>увеличение бюджета её не исправит.</em> Поэтому мы начинаем не с кнопки «Запустить рекламу».</p>
+  </div>
+</section>
+
+<section id="approach" style="padding-top:0;">
   <div class="wrap sys">
     <div>
       <div class="eyebrow">О нас</div>
       <h2 class="sec-title">Не набор инструментов.<br>Система роста.</h2>
       <p>Мы помогаем бизнесу привлекать клиентов и увеличивать продажи с помощью системного маркетинга. Смотрим на бизнес целиком: продукт, аудиторию, предложение, каналы продвижения, воронку и аналитику.</p>
-      <p>Не начинаем работу с кнопки «Запустить рекламу»: сначала разбираемся, что и кому продаём, и только потом приводим клиентов. Если проблема в предложении или сайте, увеличение бюджета её не исправит.</p>
+      <p>Сначала разбираемся, что и кому продаём и почему должны купить именно у вас, и только потом приводим клиентов.</p>
     </div>
     <div class="chain">
       <span class="eyebrow light">Четыре вопроса до запуска рекламы</span>
@@ -290,11 +323,11 @@ footer a:hover{color:var(--gold);}
   <div class="wrap">
     <div class="sec-head">
       <div><div class="eyebrow">Услуги</div><h2 class="sec-title">Решаем маркетинговые<br>задачи вашего бизнеса</h2></div>
-      <p class="sec-sub">Выбираем инструменты под цели и бюджет: можно заказать отдельную услугу или передать комплексный маркетинг. Рекламный бюджет платится отдельно, минимальный — от 50 000 ₽ в месяц.</p>
+      <p class="sec-sub">Выбираем инструменты под цели и бюджет: можно заказать отдельную услугу или передать комплексный маркетинг. Рекламный бюджет платится отдельно, минимальный — от 50 000 ₽ в месяц: с меньшим тест не наберёт статистику, и решения придётся принимать наугад.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><h3>Маркетинговый аудит и стратегия</h3><p>Анализируем бизнес, рынок, конкурентов, аудиторию, офферы, сайт и рекламные каналы. На выходе точки роста и план на 90 дней.</p><div class="price"><div><small>стоимость</small></div><span>от 25 000 ₽</span></div></div>
-      <div class="svc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8"/></svg><h3>Яндекс Директ</h3><p>Настройка и ведение кампаний с фокусом на обращения и продажи: спрос, семантика, офферы, аналитика, оптимизация.</p><div class="price"><div><small>настройка от 35 000 ₽<br>ведение от 35 000 ₽/мес</small></div><span>от 35 000 ₽</span></div></div>
+      <div class="svc lead"><span class="badge">С чего начать</span><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><h3>Маркетинговый аудит и стратегия</h3><p style="flex:0;">Разбираем бизнес, рынок, конкурентов, аудиторию, оффер, сайт и рекламные каналы. Вы получаете:</p><ul><li>документ с точками роста</li><li>план действий на 90 дней</li><li>разбор результатов на созвоне</li></ul><p>Срок — 7–10 рабочих дней.</p><div class="price"><div><small>засчитывается при заказе ведения</small></div><span>от 25 000 ₽</span></div></div>
+      <div class="svc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8"/></svg><h3>Яндекс Директ</h3><p>Настройка и ведение кампаний с фокусом на обращения и продажи: спрос, семантика, офферы, аналитика, оптимизация.</p><div class="price"><div><small>настройка · ведение в месяц</small></div><span>от 35 000 ₽</span></div></div>
       <div class="svc"><svg viewBox="0 0 24 24"><path d="M3 20h18M6 16l4-5 3 3 5-7"/></svg><h3>Реклама ВКонтакте и в соцсетях</h3><p>Стратегия, сегментация, креативы, таргетинг, запуск и оптимизация рекламных кампаний для привлечения клиентов.</p><div class="price"><div><small>стоимость</small></div><span>от 30 000 ₽</span></div></div>
       <div class="svc"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg><h3>Чат-боты и AI-автоматизация</h3><p>Боты в Telegram, ВК и MAX: заявки, запись, ответы на вопросы. Ассистент на нейросети, который не даёт заявкам теряться.</p><div class="price"><div><small>стоимость</small></div><span>после аудита</span></div></div>
       <div class="svc"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-5.5 6.5-5.5S15.5 16.5 15.5 20M16 6a3 3 0 010 6M18.5 20c0-2.2-1-3.8-2.8-4.8"/></svg><h3>Комплексный маркетинг</h3><p>Стратегия, реклама, контент, дизайн, сайт, аналитика и управление подрядчиками как единая система.</p><div class="price"><div><small>в месяц</small></div><span>от 100 000 ₽</span></div></div>
@@ -320,15 +353,16 @@ footer a:hover{color:var(--gold);}
   <div class="wrap">
     <div class="sec-head">
       <div><div class="eyebrow">Как мы работаем</div><h2 class="sec-title">Прозрачный процесс.<br>Понятные решения.</h2></div>
-      <a class="btn btn-outline" href="#contact">Обсудить проект →</a>
+      <a class="btn btn-outline" href="#contact">Начать с мини-аудита →</a>
     </div>
     <ol class="steps">
-      <li><span class="n">1</span><h3>Анализ</h3><p>Изучаем бизнес, продукт, аудиторию, конкурентов и текущую ситуацию. Определяем цели и KPI.</p></li>
-      <li><span class="n">2</span><h3>Стратегия</h3><p>Формируем план действий, каналы, офферы, воронку и приоритетные гипотезы.</p></li>
-      <li><span class="n">3</span><h3>Запуск</h3><p>Настраиваем рекламу, аналитику и процессы. Запускаем тесты.</p></li>
-      <li><span class="n">4</span><h3>Аналитика</h3><p>Смотрим на обращения, стоимость привлечения, конверсию и бизнес-показатели.</p></li>
-      <li><span class="n">5</span><h3>Масштабирование</h3><p>Усиливаем рабочие связки, отключаем слабые и тестируем новые гипотезы.</p></li>
+      <li><span class="n">1</span><h3>Анализ</h3><p>Изучаем бизнес, продукт, аудиторию, конкурентов и текущую ситуацию. Определяем цели и KPI.<span class="t">≈ 1 неделя</span></p></li>
+      <li><span class="n">2</span><h3>Стратегия</h3><p>Формируем план действий, каналы, офферы, воронку и приоритетные гипотезы.<span class="t">≈ 1 неделя</span></p></li>
+      <li><span class="n">3</span><h3>Запуск</h3><p>Настраиваем рекламу, аналитику и процессы. Запускаем тесты.<span class="t">до 2 недель</span></p></li>
+      <li><span class="n">4</span><h3>Аналитика</h3><p>Смотрим на обращения, стоимость привлечения, конверсию и бизнес-показатели.<span class="t">каждую неделю</span></p></li>
+      <li><span class="n">5</span><h3>Масштабирование</h3><p>Усиливаем рабочие связки, отключаем слабые и тестируем новые гипотезы.<span class="t">со 2-го месяца</span></p></li>
     </ol>
+    <p class="steps-note"><b>Отчёт — каждую неделю в Telegram.</b> Рекламные кабинеты и доступы оформлены на вас: если мы перестанем работать, вся история и настройки останутся у вас.</p>
   </div>
 </section>
 
@@ -353,16 +387,14 @@ footer a:hover{color:var(--gold);}
           <h3>Сеть доставки цветов</h3>
           <p>Таргет ВКонтакте плюс небольшие бюджеты в Яндекс.Директ и продвижение на картах. Аудитория сообщества выросла втрое, собрана крупная база для рассылок.</p>
           <div class="case-m"><div><div class="v">от 600K ₽</div><div class="k">бюджет в ВК в месяц</div></div><div><div class="v">×3</div><div class="k">рост подписчиков</div></div><div><div class="v">12 000+</div><div class="k">контактов в базе</div></div><div><div class="v">~2–2,5 млн ₽</div><div class="k">прибыль клиента в месяц</div></div></div>
-          <div class="note">Цифры по прибыли и бюджету ориентировочные, со слов клиента.</div>
         </div>
       </div>
       <div class="case">
         <div class="case-head"><span class="chip off">Проект завершён</span><span class="per">2024–2026</span></div>
         <div class="case-body">
           <h3>Аэротруба, Санкт-Петербург</h3>
-          <p>Таргет ВКонтакте: лидогенерация и рост подписчиков через настроенную воронку для крупнейшего аэротруба-комплекса города. Часть трафика пересекалась с другими источниками и приводила заявки на сайт.</p>
+          <p>Таргет ВКонтакте: лидогенерация и рост подписчиков через настроенную воронку для крупнейшего аэротруба-комплекса города.</p>
           <div class="case-m"><div><div class="v">от 50K ₽</div><div class="k">бюджет в месяц</div></div><div><div class="v">~150</div><div class="k">подписчиков в месяц</div></div><div><div class="v">~100</div><div class="k">лидов в месяц</div></div></div>
-          <div class="note">Цифры ориентировочные.</div>
         </div>
       </div>
       <div class="case">
@@ -373,6 +405,12 @@ footer a:hover{color:var(--gold);}
           <div class="case-m"><div><div class="v">~20K ₽</div><div class="k">бюджет в месяц</div></div><div><div class="v">10–15</div><div class="k">лидов в месяц</div></div></div>
         </div>
       </div>
+    </div>
+    <p class="note">Цифры в кейсах ориентировочные: часть данных — со слов клиентов.</p>
+
+    <div class="mid-cta">
+      <p><b>Хотите понять, где теряются ваши заявки?</b>Бесплатный мини-аудит: смотрим рекламу, сайт и оффер и называем 3–5 точек роста.</p>
+      <a class="btn btn-gold" href="#contact">Получить мини-аудит →</a>
     </div>
 
     <div class="more" id="more">
@@ -439,10 +477,17 @@ footer a:hover{color:var(--gold);}
   <div class="wrap faq">
     <div class="sec-head"><div><div class="eyebrow">Вопросы</div><h2 class="sec-title">Частые вопросы</h2></div></div>
     <details><summary>С каким рекламным бюджетом вы работаете?</summary><p>Зависит от ниши, региона, спроса и задачи. Перед запуском оцениваем рынок и предлагаем реалистичный тестовый бюджет. Минимальный бюджет на рекламу — от 50 000 ₽ в месяц.</p></details>
-    <details><summary>Гарантируете количество заявок?</summary><p>Нет. На результат влияют продукт, спрос, конкуренция, сайт, предложение и отдел продаж. Мы гарантируем прозрачный процесс, аналитику, тестирование и оптимизацию.</p></details>
+    <details><summary>Гарантируете количество заявок?</summary><p>Нет. На результат влияют продукт, спрос, конкуренция, сайт, предложение и отдел продаж. Мы гарантируем прозрачный процесс, аналитику, тестирование и оптимизацию. А чтобы старт был без лишнего риска, можно начать с аудита или одного канала, без долгосрочных обязательств.</p></details>
     <details><summary>Можно заказать только Яндекс Директ или только ВКонтакте?</summary><p>Да. Можно начать с отдельного канала, аудита или конкретной задачи.</p></details>
     <details><summary>Кто будет работать над моим проектом?</summary><p>Проектом руководит основатель агентства Елена Митрофанова: вы общаетесь напрямую с ней. Дизайнеров, разработчиков и других специалистов подключаем только если задача этого требует.</p></details>
     <details><summary>Работаете только с одним городом?</summary><p>Нет. Большинство задач решаются удалённо, поэтому география клиента не принципиальна.</p></details>
+    <details><summary>Когда будут первые результаты?</summary><p>Первые заявки обычно появляются в первые недели после запуска. Выводы о стоимости заявки и окупаемости делаем примерно через месяц, когда набирается статистика.</p></details>
+    <details><summary>Как вы отчитываетесь?</summary><p>Каждую неделю присылаем короткий отчёт в Telegram: расходы, обращения, стоимость заявки и что меняем дальше. Раз в месяц — подробный разбор с выводами и планом.</p></details>
+    <details><summary>Работаете по договору? Как оплата?</summary><p>Да, работаем по договору как ИП. Оплата по безналичному расчёту, закрывающие документы предоставляем.</p></details>
+    <details><summary>На кого оформлены рекламные кабинеты?</summary><p>На вас. Доступы, история кампаний и аналитика остаются у вас в любом случае.</p></details>
+    <details><summary>Есть минимальный срок сотрудничества?</summary><p>Долгосрочных обязательств нет. Но реклама раскрывается не сразу, поэтому оценивать результат честно имеет смысл не раньше чем через 2–3 месяца.</p></details>
+    <details><summary>Чем вы отличаетесь от фрилансера-таргетолога?</summary><p>Таргетолог настраивает рекламу. Мы сначала смотрим, что и кому вы продаёте, проверяем оффер и сайт, считаем экономику и только потом запускаем каналы. Плюс опыт ведения всего маркетинга федеральной сети.</p></details>
+    <details><summary>Что входит в бесплатный мини-аудит?</summary><p>Смотрим вашу рекламу, сайт или сообщество и оффер, на 20-минутном созвоне называем 3–5 точек роста и предлагаем, с чего начать. Ни к чему не обязывает.</p></details>
   </div>
 </section>
 
@@ -450,15 +495,15 @@ footer a:hover{color:var(--gold);}
   <div class="wrap">
     <div>
       <div class="eyebrow light">Готовы обсудить проект?</div>
-      <h2>Давайте найдём точки роста вашего бизнеса</h2>
+      <h2>Найдём точки роста вашего бизнеса за 20 минут</h2>
     </div>
     <div>
-      <p>Расскажите о проекте и текущей задаче. Изучим вводные и предложим оптимальный формат работы без продажи ненужных услуг.</p>
+      <p>Расскажите о проекте и текущей задаче. В рамках бесплатного мини-аудита посмотрим рекламу, сайт и оффер, назовём 3–5 точек роста и предложим формат работы без продажи ненужных услуг.</p>
       <div class="cta-row">
-        <a class="btn btn-gold" href="https://t.me/mit_target?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82" target="_blank" rel="noopener">Написать в Telegram →</a>
+        <a class="btn btn-gold" href="https://t.me/mit_target?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D0%BC%D0%B8%D0%BD%D0%B8-%D0%B0%D1%83%D0%B4%D0%B8%D1%82" target="_blank" rel="noopener">Получить мини-аудит в Telegram →</a>
         <a class="btn btn-line" href="tel:+79276596111">MAX: +7 927 659 6111</a>
       </div>
-      <small>Первичный разговор — 20 минут. Бесплатный мини-аудит по запросу.</small>
+      <small>Первичный разговор — 20 минут, ни к чему не обязывает.</small>
     </div>
   </div>
 </section>
