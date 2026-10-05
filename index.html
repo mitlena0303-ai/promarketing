@@ -114,6 +114,15 @@ tr:last-child td{border-bottom:none;}
 td.p{font-family:'JetBrains Mono';font-weight:700;color:var(--accent);white-space:nowrap;}
 td small{display:block;color:var(--text-dim);font-size:12.5px;margin-top:3px;}
 .price-note{font-size:13px;color:var(--text-dim);margin-top:14px;max-width:70ch;}
+@media (max-width:640px){
+  table{min-width:0;}
+  thead{display:none;}
+  tr,td{display:block;}
+  tr{padding:16px 18px;border-bottom:1px solid var(--line);}
+  tr:last-child{border-bottom:none;}
+  td{padding:2px 0;border:none;}
+  td.p{margin-top:8px;white-space:normal;font-size:16px;}
+}
 
 .about{display:grid;grid-template-columns:0.8fr 1.2fr;gap:48px;align-items:start;}
 .photo-frame{aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:var(--surface-2);border:1px solid var(--line);}
